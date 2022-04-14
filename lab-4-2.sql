@@ -24,4 +24,7 @@
 -- | Billy      | Hamilton  |
 -- | Ian        | Happ      |
 
-
+SELECT players.first_name, players.last_name
+FROM teams 
+INNER JOIN players ON teams.id = players.id
+WHERE teams.year = "2000" AND teams.name = "Chicago Cubs";
